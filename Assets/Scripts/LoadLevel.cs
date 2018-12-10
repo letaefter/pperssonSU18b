@@ -19,6 +19,9 @@ public class LoadLevel : MonoBehaviour
     //        yos2 = false;
     //    }
     //}
+    private void Start()
+    {
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "Player")

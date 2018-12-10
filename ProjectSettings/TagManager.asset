@@ -9,6 +9,10 @@ TagManager:
   - Coin
   - Ground
   - Spikes
+  - PlayerProjectile
+  - WorldText
+  - WorldTextHitbox
+  - KeepOff
   layers:
   - Default
   - TransparentFX
@@ -32,7 +36,7 @@ TagManager:
   - 
   - 
   - 
-  - 
+  - Top
   - 
   - 
   - 
@@ -57,4 +61,7 @@ TagManager:
     locked: 0
   - name: EditorPriorities
     uniqueID: 809844729
+    locked: 0
+  - name: Infront
+    uniqueID: 1918486309
     locked: 0

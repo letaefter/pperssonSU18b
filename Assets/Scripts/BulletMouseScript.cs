@@ -2,17 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyHorizontalMovement : MonoBehaviour
+public class BulletMouseScript : MonoBehaviour
 {
     public float baseSpeedDoNotEdit = 2f;
     public float uniqueSpeed = 2f;
+    //du måste ändra i koden om den ska ändra håll
     public bool left = true;
 
     //
     float numberFor;
     //
-
-    public GroundChecker check;
+    
 
     private Rigidbody2D rbody;
     // Use this for initialization
@@ -37,10 +37,6 @@ public class EnemyHorizontalMovement : MonoBehaviour
             transform.localScale = new Vector3(-numberFor, transform.localScale.y, transform.localScale.z);
             rbody.MovePosition(rbody.position + (new Vector2(uniqueSpeed, 0) * Time.deltaTime));
         }
-        if (check.isGrounded == false)
-        {
-            left = !left;
-        }
     }
     void Update()
     {
@@ -49,16 +45,13 @@ public class EnemyHorizontalMovement : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.tag == "PlayerProjectile")
+        if (collision.tag == "Ground" || collision.tag == "InvisibleWall")
         {
-
-        }
-        else if (collision.tag != "Coin")
-        {
-            left = !left;
+            Destroy(gameObject);
         }
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
+
     }
 }

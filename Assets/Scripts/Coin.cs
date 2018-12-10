@@ -9,11 +9,13 @@ public class Coin : MonoBehaviour
     int yos;
     int spin;
     int aspin;
+    int random;
     private void Start()
     {
         value = 1;
         yos = 0;
-        spin = Random.Range(1,5);
+        spin = Random.Range(1, 5);
+        random = Random.Range(1, 3);
         if (spin == 1)
             aspin = 70;
         if (spin == 2)
@@ -22,12 +24,12 @@ public class Coin : MonoBehaviour
             aspin = 120;
         if (spin == 4)
             aspin = 150;
-        if (spin == 5)
-            aspin = 20000;
+        if (random == 1)
+            aspin = -aspin;
     }
     private void FixedUpdate()
     {
-        transform.Rotate(0f, aspin * Time.deltaTime, 0f);
+        transform.Rotate(0f, 0f, aspin * Time.deltaTime);
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
