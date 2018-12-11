@@ -4,16 +4,14 @@ using UnityEngine;
 
 public class EnemyHitPoints : MonoBehaviour
 {
-    public GameObject enemy;
+    //om hp på objectet som detta script sitter på bliva mindre än 1 (int) så kommer gameObjectet inte existera längre :)
     public int hp;
-    void Start()
-    {
-    }
     void Update()
     {
+        // designad för att man ska lägga en unik hp på varje enemy (kan prefaba en med fast hp annars (kan också göra ett hp script för varje unik fiendetyp fast orkar inte))
         if (hp <= 0)
         {
-            Destroy(enemy);
+            Destroy(gameObject);
         }
     }
 }

@@ -190,7 +190,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a28df53d8b5d45a3d629698b79eb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: 1234738610327432}
   hp: 5
 --- !u!114 &114619930452007616
 MonoBehaviour:
@@ -205,6 +204,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitEnemy: {fileID: 1234738610327432}
   hp: {fileID: 114487255310700748}
+  nocointext: {fileID: 0}
 --- !u!114 &114657508214116598
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -230,6 +230,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneToLoad: SampleScene
+  pspawn: {fileID: 0}
 --- !u!212 &212508264092188820
 SpriteRenderer:
   m_ObjectHideFlags: 1

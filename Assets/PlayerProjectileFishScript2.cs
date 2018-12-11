@@ -4,11 +4,15 @@ using UnityEngine;
 
 public class PlayerProjectileFishScript2 : MonoBehaviour
 {
-    //detta script gör så att fisken kommer förstöras 1.75 sekunder efter den spawnar.
+    //detta script gör så att fisken kommer förstöras 2 sekunder efter den spawnar.
+    //och så den försvinner om den träffar en trigger som har tag'en "Enemy"
+    private void Start()
+    {
+        //betyder att den kommer ta bort objectet "gameObject" 2 sekunder efter den kallas. gameObject är objektet som detta script sitter på, det sitter på fisken.
+        Destroy(gameObject, 2f);
+    }
     void Update()
     {
-        //betyder att den kommer ta bort objectet "gameObject" 1.75 sekunder efter den kallas. gameObject är objektet som detta script sitter på, det sitter på fisken.
-        Destroy(gameObject, 1.75f);
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {

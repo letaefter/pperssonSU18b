@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Coin : MonoBehaviour
 {
+    //static betyder att den alltid finns i alla scripts och kan nås från överallt och är samma i för alla
     public static int collectedCoinsCombinedValue;
     int value;
     int yos;

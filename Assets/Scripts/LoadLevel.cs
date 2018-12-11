@@ -5,9 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class LoadLevel : MonoBehaviour
 {
-    bool yos;
-    int tTimes;
     public string sceneToLoad = "SampleScene";
+    public PlayerSpawn pspawn;
     //private void OnTriggerEnter2D(Collider2D collision)
     //{
     //    if (collision.tag == "Player")
@@ -26,8 +25,8 @@ public class LoadLevel : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
-            SceneManager.LoadScene(sceneToLoad);
             Coin.collectedCoinsCombinedValue = 0;
+            SceneManager.LoadScene(sceneToLoad);
         }
     }
 }
