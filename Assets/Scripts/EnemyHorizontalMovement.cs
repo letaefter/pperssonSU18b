@@ -57,6 +57,7 @@ public class EnemyHorizontalMovement : MonoBehaviour
         //om den nuddar ett object som inte är mark ska den inte svänga fan
         else if (collision.tag == "Ground"|| collision.tag == "InvisibleWall")
         {
+            //betyder att den blir det den inte redan är eftersom en bool bara kan vara 2 värden.
             left = !left;
         }
     }

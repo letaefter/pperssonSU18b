@@ -14817,6 +14817,7 @@ GameObject:
   - component: {fileID: 534669905}
   - component: {fileID: 534669904}
   - component: {fileID: 534669903}
+  - component: {fileID: 534669906}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: Untagged
@@ -14878,12 +14879,24 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 534669902}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
-  m_LocalScale: {x: 1.6666665, y: 1.3333334, z: 1}
+  m_LocalPosition: {x: 55.5, y: -3.5, z: -10}
+  m_LocalScale: {x: 0.83333325, y: 0.6666667, z: 1}
   m_Children: []
-  m_Father: {fileID: 1439677117}
-  m_RootOrder: 1
+  m_Father: {fileID: 0}
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &534669906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 534669902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90eb7a24b5484d84496bdb59d7926fa7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tf: {fileID: 1439677117}
 --- !u!1 &537646281
 GameObject:
   m_ObjectHideFlags: 0
@@ -57270,7 +57283,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1439677117}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &620820314
 MonoBehaviour:
@@ -61046,11 +61059,10 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1439677116}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -27, y: -11.5, z: 0}
+  m_LocalPosition: {x: 94, y: 23, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children:
   - {fileID: 2004552647}
-  - {fileID: 534669905}
   - {fileID: 1956439611}
   - {fileID: 620820313}
   m_Father: {fileID: 664080594}
@@ -61163,6 +61175,7 @@ MonoBehaviour:
   edgeJumpSpeed: 7
   groundCheck: {fileID: 2004552649}
   edge: {fileID: 1956439613}
+  empowered: 0
 --- !u!58 &1439677122
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -65293,7 +65306,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1439677117}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!61 &1956439612
 BoxCollider2D:

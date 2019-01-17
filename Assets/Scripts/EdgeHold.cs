@@ -4,18 +4,8 @@ using UnityEngine;
 
 public class EdgeHold : MonoBehaviour
 {
+    //en mindre version av groundcheck som gör att om man landar precis på en kant så kan man hoppa upp. typ som om man hänger och drar sig upp
     public bool edgeHeld = false;
-    // Use this for initialization
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "Ground")

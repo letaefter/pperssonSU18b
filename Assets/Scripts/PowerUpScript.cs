@@ -6,18 +6,19 @@ public class PowerUpScript : MonoBehaviour
 {
     public PlayerMovement aad;
     public GameObject rdoby;
-    float yes;
+    bool yes;
     void Start()
     {
-        yes = 0;
+        yes = false;
     }
     void Update()
     {
-        if (yes == 1)
+        //yes blir true om man nuddar PowerUp Objectet och sedan leder det till att en domino variabel i PLayerMovement orsakar att powerupen fungerar.
+        if (yes == true)
         {
-            //kommer gå in i spelarens huvudscript för att tillfälligt (PlayerMovement restricterar PowerUps tidsgräns) ge spelaren ett högre hopp, och en större sprite.
-            rdoby.transform.localScale = rdoby.transform.localScale * 1.3f;
-            aad.jumpSpeed = aad.jumpSpeed * 1.5f;
+            //kommer gå in i spelarens PlayerMovement.cs för att tillfälligt (PlayerMovement restricterar PowerUps tidsgräns) ge spelaren ett högre hopp, och en större sprite.
+            //I det scriptet kommer sedan powerupen avslutas efter en tidsgräns
+            aad.empowered = 1;
             //sedan deaktiveras powerup objectet så man inte kan aktivera den igen
             gameObject.SetActive(false);
         }
@@ -26,7 +27,7 @@ public class PowerUpScript : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
-            yes = 1;
+            yes = true;
         }
     }
 }
